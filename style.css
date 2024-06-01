@@ -1,0 +1,191 @@
+@font-face {
+    font-family:"plain-light" ;
+    src: url(./finalProjectFont/plain-light-webfont.ttf);
+}
+@font-face {
+    font-family:"plain-regular" ;
+    src: url(./finalProjectFont/plain-regular-webfont.ttf);
+}
+@font-face {
+    font-family:"silkserif-lightitalic" ;
+    src: url(./finalProjectFont/silkserif-lightitalic-webfont.ttf);
+}
+@font-face {
+    font-family:"silkserif-regularitalic" ;
+    src: url(./finalProjectFont/silkserif-regularitalic-webfont.ttf);
+}
+@font-face {
+    font-family:"MarquesfreeOutlineitalic" ;
+    src: url(./finalProjectFont/MarquesfreeOutlineitalic-nRpGM.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:#fff;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#crsr{
+    height: 2vw;
+    width: 2vw;
+    /* background-color: #fff; */
+    border-radius: 50%;
+    border: 2px solid #f9f3f3;
+    position: fixed;
+    z-index: 99999;
+    mix-blend-mode: difference;
+    transform: translateX(-50%,-50%);
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #110f0f;
+    padding: 20vh 10vw;
+}
+
+.line{
+    /* background-color: red; */
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 4vw;
+}
+
+ .line h1{
+    font-size: 5.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family:"plain-light";
+    /* background-color: red; */
+
+ }
+
+ .line h2{
+    /* width: 15vw; */
+    /* height: 6.6vw; */
+    /* padding-left: 1vw; */
+    font-size: 4.8vw;
+    /* text-align: center; */
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family:"plain-light";
+    /* background-color: aqua; */
+
+ }
+
+ .line:last-of-type{
+    gap:2vw;
+ }
+
+ #count{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    /* gap: 1.2vw; */
+ }
+
+ #count h5 , #count h6{
+    font-family: 'silkserif-lightitalic';
+    font-size: 3vw;
+    font-weight: 100;
+    width: 7vw;
+    text-align: center;
+    /* opacity: 0; */
+ }
+
+
+
+#main{
+    position: relative;
+    background-color: #000000;
+    /* background-color: aqua; */
+}
+
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    /* background-color: aqua; */
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.3vw 5.5vw;
+    font-family: 'plain-regular';
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+
+#nav-part2 h4{
+    font-size: 0.8vw;
+}
+
+.hero{
+    margin-left: 27%;
+    width: 72%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+#page1 .hero:nth-of-type(2){
+    /* ye nav ko 1 pr mann raha hai issliye kaam nhi kr raha  */
+    /* padding-top: 10vw; */
+    margin-top: 14vh;
+    /* margin dena better hai  */
+    /* background-color: aqua; */
+}
+
+.hero h1{
+    font-size: 6.2vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family:"plain-light";
+    line-height: 6.1vw;
+    /* background-color: red; */
+}
+
+
+#hover1:hover,#hover2:hover{
+    text-decoration: underline;
+    /* font-family:"MarquesfreeOutlineitalic"; */
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+}
+
+
+
+
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+

@@ -1,0 +1,177 @@
+@loader-------------:>>>>>>>>>>>>>>>>
+loader jab chalega tabtak hum page ko scroll nhi kr sakte chahe kitna bhi try kr le 
+so hum loader pr locomotive nhi lgayenge toh #main se pehle loader naam se div create
+krenge.
+                    #loader{
+                        height: 100%;
+                        width: 100%;
+
+                        position: fixed;----->z-index only work with position property 
+                        so position :fixed de di 
+
+                        z-index: 999;--->taki loader screen pr dekhe 
+                        ye nhi diya toh main div hi screen pr dikhe ga...
+                        
+                        background-color: aqua;
+                    }
+
+
+@                   gsap.from(".line h1",{
+                        y:150,
+                        stagger:0.25,
+                        duration:0.6,
+                        delay:0.5
+
+                    })
+ye niche se upar aayega y aces se aur .line main overflow hiddern krne ke karan 
+ye nich dikhega nhi our ek effect create hoga
+
+
+@                let count = document.querySelector("#count h5");
+                let grow = 0;
+                setInterval(() => {
+
+                    if (grow<100) {
+                        count.innerHTML=grow++;
+                        // console.log(grow++);      
+                    } else {
+                        // console.log("100");
+                        count.innerHTML=100;
+
+                    }
+                    
+                }, 100);
+
+ye counter ke liye hai iske karan hum loder pr counting dekh pa rahe hai 
+setInterval function har 100 milisecound pr chalega 
+
+                let count = document.querySelector("#count h5");
+                let grow = 0;
+                */$$$problem hogi kunki humne ek local variable create kr diya 
+                *grow naam se jisme undifine hai toh ye 100 hi print krega 
+                *setInterval((grow) => {
+
+                   * if (grow<100) {
+                    *    count.innerHTML=grow++;
+                    *    // console.log(grow++);      
+                    *} else {
+                    *    // console.log("100");
+                    *   count.innerHTML=100;
+                    *}
+                }, 100);
+
+
+//updated code 
+
+let tl = gsap.timeline();
+
+tl.from(".line #count h5,h6",{
+    opacity:0,
+    duration:0.8,
+    delay:0.6,
+    onStart:function () {
+        let count = document.querySelector("#count h5");
+        let grow = 0;
+        setInterval(() => {
+
+            if (grow<100) {
+                count.innerHTML=grow++;
+                // console.log(grow++);      
+            } else {
+                // console.log("100");
+                count.innerHTML=100;
+
+            }
+    
+        }, 45);        
+    }
+    
+})
+
+tl.from(".line h1,h2",{
+    y:150,
+    stagger:0.25,
+    duration:0.6,
+    // delay:0.5
+
+})
+
+tl.to("#loader",{
+    opacity:0,
+    duration:0.6,
+    delay:3.6,
+})
+
+
+tl.from("#main #page1",{
+    y:1200,
+    duration:0.2,
+    // delay:
+    opacity:0,
+    ease:Power4,
+})
+
+tl.to("#loader",{
+    dispaly:"none"
+})
+
+
+
+//Now code which i made 
+
+tl.to(".line h2",{
+    onStart:function () {
+        
+        let now = document.querySelector(".line h2")
+        let tmp =0;
+        let x = setInterval(() => {
+            // now.innerHTML= "font-family: 'silkserif-lightitalic';";
+            // console.log(now);
+            // how to change css----->>>>>>
+            // now.style.color="pink";
+            if (tmp%2==0) {
+                // now.style.fontFamily ="silkserif-lightitalic";
+                now.style.fontFamily ="MarquesfreeOutlineitalic";
+                tmp++; 
+                console.log(tmp);  
+            }
+            else{
+                tmp++;
+                now.style.fontFamily ="plain-light";
+                console.log(tmp);  
+
+
+            }
+
+            if (tmp==6) {
+                clearInterval(x);
+                console.log(tmp);  
+
+            }
+            
+        }, 1000);
+
+        
+    }
+})
+
+=================================
+so code kafi baar run krne ke baad mujehe pta chala ki gadabad h2 ke 
+karn ho rahi h ....
+ye code likhne ke baad merko koi error nhi aaye
+            <div class="hero" id="hero3">
+                <!-- <h1>web/graphic</h1> -->
+                <h1> ---------------------->ye h1 nhi dena tha iss karan problem aa rahi thi
+                    <h1>web/</h1>
+                    <h1>graphic</h1>
+                </h1>
+            </div>
+  
+    
+
+
+
+
+
+
+
