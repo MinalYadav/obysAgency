@@ -24,12 +24,19 @@
     padding: 0;
     box-sizing: border-box;
     color:#fff;
+    font-family: "plain-regular";
 }
 
 html,body{
     height: 100%;
     width: 100%;
 }
+
+body{
+    overflow-x: hidden;
+}
+
+
 
 #crsr{
     height: 2vw;
@@ -233,8 +240,112 @@ html,body{
 }
 
 #page3{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #151515;
+    position: relative;
 }
 
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    padding-top: 5vh;
+    position: relative;
+    /* overflow-y: auto; */
+    /* background-color: #ffa63d; */
+}
+
+#page4-content{
+    position: relative;
+    /* background-color: #3de2ff; */
+    width: 71vw;
+    height: 285vh;
+    margin-left: 28vw;
+
+}
+
+#page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-family: "plain-regular";
+}
+#page4-content .underline{
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin: 5vw 0;
+}
+
+#page4-content>p{
+    font-size: 2.1vw;
+    width: 45%;
+    margin-bottom: 5vw;
+}
+
+
+#page4-flex{
+    display: flex;
+}
+
+#page4-flex img{
+    width: 45%;
+    /* height: 20%; */
+    object-fit: cover;
+    /* overflow: hidden; */
+}
+
+#page4-flex p{
+    font-size: 1.01vw;
+    width: 25%;
+    line-height: 1.4vw;
+    margin-left: 2vw;
+
+}
+
+#blue-div{
+    width: 45%;
+    height:33% ;
+    background-color: #3f7df4;
+    padding: 3vw;
+    position: absolute;
+    bottom: 15%;
+    right: 20%;
+}
+
+.blue-elem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5vw 0;
+    border-bottom: 1px solid #fff;
+}
+
+.blue-elem h4{
+    font-size: 1.7vw;
+    font-weight: 200;
+}
+
+.blue-elem p{
+    font-size: 1vw;
+    font-weight: 100;
+    width: 40%;
+}
+
+#page4-content .underline:nth-last-of-type(1){
+    /* background-color: #ffa63d; */
+    margin-top: 40vw;
+    margin-bottom: 2vw;
+}
+
+#page4-content>h5{
+    font-size: 1.3vw;
+    font-weight: 100;
+}
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+}
