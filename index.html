@@ -10,7 +10,8 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     
     <!-- shery js cdn -->
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css" />                      
 
     <!-- remixicon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
@@ -44,7 +45,7 @@
     <div id="main">
 
         <!-- page1 -->
-        <div id="page1" data-scroll data-scroll-speed="-1.8">
+        <div id="page1" data-scroll data-scroll-speed="-1">
             <!-- navbar -->
             <div id="nav">
                 <svg class="brand__svg" width="71" height="27" viewBox="0 0 71 27">
@@ -85,7 +86,8 @@
 
         </div>
 
-        <div id="page2" data-scroll data-scroll-speed="-1.9">
+        <!-- page2 -->
+        <div id="page2" data-scroll data-scroll-speed="-2.5">
             <div id="video-continer">
                 <div id="video-cursur">
                     <i class="ri-play-fill"></i>
@@ -95,8 +97,20 @@
             </div>
         </div>
 
-        <div id="page3" data-scroll data-scroll-speed="-1.8"></div>
+        <!-- page3 -->
+        <div id="page3" data-scroll data-scroll-speed="-2.5">
+            <h1>OUR PROJECTS</h1>   
+            <div class="underline"></div>
+            <div id="img-div-container">
+                <div class="image-div">
+                    <img src="https://images.unsplash.com/photo-1718039006696-b653fe660e3e?q=80&w=1917&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img1">
+                    <img src="https://images.unsplash.com/photo-1717978321702-8f6a1513fcae?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img2">
+                </div>
 
+            </div>
+        </div>
+
+        <!-- page4 -->
         <div id="page4" data-scroll data-scroll-speed="-1.8">
             <div id="page4-content">
                 <h1>ABOUT OBYS</h1>   
@@ -157,6 +171,7 @@
             </div>
         </div>
 
+        <!-- page5 -->
         <div id="page5" data-scroll data-scroll-speed="-1.8">
             <div class="scroll-ele">
                 <h1><span>TECHNOLOGY</span> - FASHION - SPORT -</h1>
@@ -180,6 +195,7 @@
 
         </div>
 
+        <!-- footer -->
         <div id="footer" data-scroll data-scroll-speed="-1.8">
             <div id="footer-content">
                 <h1>let's create</h1>
@@ -224,8 +240,15 @@
     <!-- scrollTriggrt -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Three.js is needed for 3d Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+        
     <!-- shery js  -->
-    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <!-- <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> -->
+    <script  type="text/javascript"  src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
 
     <!-- javaScript -->
     <script src="./script.js"></script>
