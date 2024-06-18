@@ -148,13 +148,19 @@ loaderAnimation();
 function cursorAnimation() {
     // moving cursur
 
-    document.addEventListener("mousemove",function (detail) {
-        // console.log("hello");
-        // console.log(detail);
-        gsap.to("#crsr",{
-            left:detail.x,
-            top:detail.y,
-        }) 
+    // document.addEventListener("mousemove",function (detail) {
+    //     // console.log("hello");
+    //     // console.log(detail);
+    //     gsap.to("#crsr",{
+    //         left:detail.x,
+    //         top:detail.y,
+    //     }) 
+    // })
+
+    Shery.mouseFollower({
+        skew:true,
+        ease:"cubic-bezier(0.23, 1, 0.320, 1)",
+        duration:1,
     })
 
     // magnet effect
@@ -162,6 +168,60 @@ function cursorAnimation() {
     Shery.makeMagnet("#nav svg ,#nav-part2 h4",);
     // Shery.makeMagnet("#nav svg",);
     
+
+    // video-container
+    let videoContainer = document.querySelector("#video-container")
+    let video = document.querySelector("#video-container video")
+    videoContainer.addEventListener("mouseenter",function(){
+        videoContainer.addEventListener("mousemove",function(dets){
+            gsap.to(".mousefollower",{
+                opacity:0
+                // display:"none"
+            })
+
+            gsap.to("#video-cursur",{
+                left:dets.x - 570,
+                y:dets.y - 300
+            })
+        })
+    })
+    
+    videoContainer.addEventListener("mouseleave",function(){
+        gsap.to(".mousefollower",{
+            opacity:1,
+            // display: "initial",
+        })
+
+        gsap.to("#video-cursur",{
+            left:"70%",
+            top:"-15%"
+            // bottom:"70%"
+        })
+        
+    })
+
+    let flag=0
+    videoContainer.addEventListener("click",function(){
+        if (flag==0) {
+            // alert("heelo")
+            video.play()
+            video.style.opacity = 1  
+            document.querySelector("#video-cursur").innerHTML='<i class="ri-pause-line"></i>'
+            gsap.to("#video-cursur",{
+                scale:0.5
+            })    
+            flag=1 
+        } else {
+
+            video.pause()
+            video.style.opacity = 0  
+            document.querySelector("#video-cursur").innerHTML='<i class="ri-play-fill"></i>'
+            gsap.to("#video-cursur",{
+                scale:1
+            })    
+            flag=0
+        }  
+    })
 }
 cursorAnimation();
 
