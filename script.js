@@ -228,7 +228,6 @@ cursorAnimation();
 // calling locomotiveAnimate
 locomotiveAnimate();
 
-
 // Shery Animation for page 3 images
 function sheryAnimation() {
     Shery.imageEffect(".image-div",{
@@ -240,3 +239,23 @@ function sheryAnimation() {
     })
 }
 sheryAnimation();
+
+document.addEventListener("mousemove",function(dets) {
+    gsap.to("#flag",{
+        x:dets.x,
+        y:dets.y
+    })
+})
+
+let hero3 = document.querySelector("#hero3")
+hero3.addEventListener("mouseenter",function() {
+    gsap.to("#flag",{
+        opacity:1
+    })
+})
+
+hero3.addEventListener("mouseleave",function() {
+    gsap.to("#flag",{
+        opacity:0
+    })
+})

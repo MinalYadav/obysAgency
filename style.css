@@ -210,6 +210,21 @@ body{
     /* border: 0.5vw solid transparent; */
 }
 
+#flag{
+    height: 25vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+
+#hero3{
+    /* background-color: red; */
+    position: relative;
+    z-index: 999;
+}
+
 
 
 /* page2 */
