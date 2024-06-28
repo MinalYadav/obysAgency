@@ -121,14 +121,14 @@ body{
  }
 
 
-
+/* wrapper div main */
 #main{
     position: relative;
     background-color: #000000;
     /* background-color: aqua; */
 }
 
-
+/* page1 */
 #page1{
     height: 100vh;
     width: 100%;
@@ -136,6 +136,8 @@ body{
     /* background-color: aqua; */
 }
 
+
+/* navbar */
 #nav{
     display: flex;
     align-items: center;
@@ -155,6 +157,8 @@ body{
     font-size: 0.8vw;
 }
 
+
+/* hero bolck of page1 */
 .hero{
     margin-left: 27%;
     width: 72%;
@@ -182,8 +186,6 @@ body{
     position: relative;
 }
 
-
-
 #hero1::before{
     content: "01";
     font-size: 3vw;
@@ -193,14 +195,12 @@ body{
     top: 29%;
 }
 
-
 #hover1,#hover2{
     border-bottom: 0.5vw solid #fff;
     margin-right: 0.5vw;
     padding-bottom: 0.4vw;
     /* transition: all ease 0.3s; */
 }
-
 
 #hover1:hover,#hover2:hover{
     -webkit-text-stroke: 1px #fff;
@@ -210,6 +210,7 @@ body{
     /* border: 0.5vw solid transparent; */
 }
 
+/* flag img for animation on hero section  */
 #flag{
     height: 25vw;
     position: absolute;
@@ -224,7 +225,6 @@ body{
     position: relative;
     z-index: 999;
 }
-
 
 
 /* page2 */
@@ -725,5 +725,106 @@ body{
 ._canvas_container{
     z-index: 999999 !important;
     pointer-events: none;
+
+}
+
+
+/* responsive code */
+
+@media (max-width:600px) {
+    
+    /* page1 */
+    #page1{
+        height: 80vh;
+        width: 100%;
+        /* background-color: #151515; */
+        /* background-color: aqua; */
+    }
+    
+    /* navbar */
+    #nav{
+        padding-top: 4vw;
+        padding-bottom:4vw;
+    }
+    
+    #nav-part2{
+        gap: 3.5vw;
+    }
+    
+    #nav-part2 h4{
+        font-size: 1.8vw;
+    }
+
+
+    /* hero bolck of page1 */
+    .hero{
+        margin-left: 8%;
+    }
+
+    #page1 .hero:nth-of-type(2){
+        margin-top: 20vh;
+    }
+
+    .hero h1{
+        font-size: 9.5vw;
+        line-height: 9.8vw;
+    }
+
+    #hero1::before{
+        font-size: 6vw;
+        left: 8%;
+        top: 26%;
+    }
+
+    /* flag img for animation on hero section  */
+    #flag{
+        height: 35vw;
+    }
+
+    /* page2 */
+    #page2{
+        height: 90vh;
+        width: 100%;
+        margin-top: 12vh;
+        position: relative;
+    }
+
+    #video-container{
+
+        height: 100%;
+        width: 100%;
+        left: 0;
+        background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #video-continer img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+    }
+
+    #video-continer video{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0;
+    }
+
+    #video-cursur{
+        height: 19vw;
+        width: 19vw;
+        top:30%;
+        left: 45%;
+    }
+
+    #video-cursur i{
+        font-size: 4vw;
+    }
+
+
+
 
 }
